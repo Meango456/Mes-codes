@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-bottom: 2px dashed #999;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #333;
+  border: 2px dashed #999;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+input[type="month"] {
+  margin-top: 10px;
+}
+
+.layout {
+  display: flex;
+  padding: 20px;
+}
+
+.left-aside {
+  width: 25%;
+  background-color: #d4f4d4;
+  padding: 15px;
+  border: 2px dashed green;
+}
+.img h3 {
+    margin-left: 100px;
+}
+
+main {
+  width: 75%;
+  padding-left: 20px;
+}
+
+section {
+  border: 2px dashed orange;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figcaption {
+  font-style: italic;
+  color: orange;
+}
+
+.right-aside {
+  background-color: #f9f9f9;
+  border: 2px dashed orange ; 
+  padding: 15px;
+  margin-top: 20px;
+}
+
+mark {
+  background-color: yellow;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px dashed orange;
+}

@@ -1,0 +1,128 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+/* Barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.navbar button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: #666;
+}
+
+.titre-video {
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+  background: white;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Section du haut (vidéo + boutons) */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Lecteur vidéo */
+.video-player {
+  width: 60%;
+  height: 250px;
+  background: #ccc;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Zone boutons */
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-left: 20px;
+  align-items: start;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border: 1px solid #333;
+  background: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+.actions button:hover {
+  background: #ddd;
+}
+
+.views {
+  grid-column: span 2; /* Le texte prend toute la largeur en dessous des boutons */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Commentaire */
+.commentaire {
+  margin-top: 15px;
+}
+
+.commentaire textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+.commentaire .submit-btn {
+  padding: 8px 15px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.commentaire .submit-btn:hover {
+  background: #666;
+}
