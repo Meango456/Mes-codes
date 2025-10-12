@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie Enfant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --violet: #6a0dad;
+      --noir: #000000;
+      --gris: #f8f9fa;
+    }
+
+    body {
+      background-color: var(--gris);
+      font-family: "Poppins", Arial, sans-serif;
+      margin-top: 70px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--violet) !important;
+    }
+
+    .bg-violet { background-color: var(--violet) !important; }
+    .text-violet { color: var(--violet) !important; }
+
+    header {
+      background: linear-gradient(135deg, #4B0082, #7B68EE);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 5px solid var(--violet);
+    }
+
+    header h1 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid var(--violet);
+      border-radius: 15px;
+      background-color: white;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-container:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--violet);
+    }
+
+    .caption {
+      font-weight: bold;
+      color: var(--violet);
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      color: #e63946;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn-acheter {
+      background-color: var(--violet);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-acheter:hover {
+      background-color: #531fb3;
+    }
+
+    footer {
+      background-color: var(--noir);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#">Galerie Enfant</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="dev.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="homme.html">Hommes</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="femme.html">Femmes</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="enfant.html">Enfants</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- En-tête -->
+  <header>
+    <h1>🎨 Bienvenue dans notre Galerie Enfant</h1>
+    <p>Des articles ludiques et colorés pour les enfants heureux</p>
+  </header>
+
+  <!-- Présentation -->
+  <section class="intro">
+    <h3 class="text-violet mb-3"> À propos</h3>
+    <p>
+      La <strong>Galerie Enfant</strong> propose une collection variée de vêtements, jouets et accessoires pour enfants.
+      Nos produits sont choisis avec soin pour allier <strong>qualité, style et confort</strong>.
+    </p>
+  </section>
+
+  <!-- Nos coups de cœur -->
+  <section class="container">
+    <h3 class="text-violet text-center mb-4"> Nos Coups de Cœur</h3>
+    <div class="image-grid">
+      <div class="image-container" onclick="afficherMessage('Sneakers Enfant')">
+        <img src="sneakers enfants.jfif" alt="Sneakers">
+        <div class="caption">Sneakers Enfant</div>
+        <div class="price">7 500 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('Sneakers Enfant')">Acheter</button>
+      </div>
+
+      <div class="image-container" onclick="afficherMessage('T-shirt Coloré')">
+        <img src="tee shirt enfants.jfif" alt="T-shirt">
+        <div class="caption">T-shirt Coloré</div>
+        <div class="price">4 500 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('T-shirt Coloré')">Acheter</button>
+      </div>
+
+      <div class="image-container" onclick="afficherMessage('Jeu de Construction')">
+        <img src="image lego.jfif" alt="Jeu">
+        <div class="caption">Jeu de Construction</div>
+        <div class="price">9 800 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('Jeu de Construction')">Acheter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nouveautés -->
+  <section class="container">
+    <h3 class="text-violet text-center mb-4">🧸 Nouveautés</h3>
+    <div class="image-grid">
+      <div class="image-container" onclick="afficherMessage('Sandales Été')">
+        <img src="kitto.jfif" alt="Sandales">
+        <div class="caption">Kito Pour Enfants</div>
+        <div class="price">2 500 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('Sandales Été')">Acheter</button>
+      </div>
+
+      <div class="image-container" onclick="afficherMessage('Peluche Douce')">
+        <img src="peluche.jfif" alt="Peluche">
+        <div class="caption">Peluche Douce</div>
+        <div class="price">3 900 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('Peluche Douce')">Acheter</button>
+      </div>
+
+      <div class="image-container" onclick="afficherMessage('Robe Fille')">
+        <img src="robe enfant.jfif" alt="Robe">
+        <div class="caption">Robe Fille</div>
+        <div class="price">6 700 FCFA</div>
+        <button class="btn-acheter" onclick="acheter('Robe Fille')">Acheter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📍 Yopougon, Abidjan — 📞 +225 05 44 74 30 68 — 📧 Taysoncurry59@gmail.com</p>
+    <p>© 2025 Galerie Enfant. Tous droits réservés.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function afficherMessage(nomProduit) {
+      alert("Vous avez cliqué sur : " + nomProduit);
+    }
+
+    function acheter(nomProduit) {
+      event.stopPropagation();
+      alert("🛍️ Merci pour votre intérêt ! Vous avez choisi : " + nomProduit);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
